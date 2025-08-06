@@ -3,8 +3,6 @@
 Welcome to the Latin American Research Summit repository.  
 This summit is dedicated to fostering collaboration, innovation, and academic growth among early-career researchers across Latin America.
 
----
-
 ## About the Summit
 
 The Latin American Research Summit is a two-day event designed to bring together undergraduate, master’s, and doctoral students to showcase their ongoing research, receive feedback, and strengthen their academic identity.
@@ -13,8 +11,6 @@ The event focuses on:
 - **Emerging Researchers** – Highlighting research from students at all academic levels.
 - **International Speakers** – Presenting global perspectives on management, artificial intelligence, and entrepreneurship.
 - **Networking and Collaboration** – Creating academic connections, promoting co-authorship, and building regional research networks.
-
----
 
 ## Event Schedule
 
@@ -44,23 +40,17 @@ The event focuses on:
 - **15:00 – 17:00** – Networking  
   Social event to strengthen connections and explore future collaborations.
 
----
-
 ## Key Speakers
 
 - **Felipe Muñoz** – Harvard University  
 - **Denisse Goldfarb** – Pontificia Universidad Católica de Chile  
 - **Juan Sánchez, PhD** – Tecnológico de Monterrey  
 
----
-
 ## Summit Objectives
 
 - Highlight research from UCSC-affiliated research groups.
 - Strengthen scientific training for participants at all academic levels.
 - Foster academic networks in management and innovation throughout Latin America.
-
----
 
 ## Partners
 
@@ -69,16 +59,8 @@ The event focuses on:
 - Universidad Adolfo Ibáñez (UAI)  
 - Instituto Tecnológico Purísima del Rincón (ITSPR)
 
----
-
 ## Contact and Registration
 
 - **Website:** [latamresearch.org](https://latamresearch.org)  
 - **Email:** info@latamresearch.org  
 - **Registration:** Visit our website to register and participate.
-
----
-
-## Tagline
-
-**Advancing knowledge. Empowering the next generation of researchers.**
