@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Blog List styles
+   ========================================================================== */
+
+.qodef-blog {
+	
+	&.qodef-item-skin--light {
+
+		.qodef-blog-item {
+			color: #fff;
+
+			a,
+			p,
+			h1, h2, h3, h4, h5, h6,
+			svg,
+			.qodef-info-separator-end:after,
+			.qodef-single-links .qodef-m-single-links-title {
+				color: #fff !important;
+			}
+
+			.qodef-e-tags a {
+				border-color: #fff;
+			}
+		}
+	}
+}

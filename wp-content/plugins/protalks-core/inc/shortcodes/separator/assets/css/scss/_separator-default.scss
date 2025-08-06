@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Separator shortcode styles
+   ========================================================================== */
+
+.qodef-separator {
+	font-size: 0;
+	height: auto;
+	line-height: 1;
+	position: relative;
+
+	.qodef-m-line {
+		@include qodefRelativeLayout();
+
+		border-bottom: 1px solid $border-color;
+	}
+
+	&.qodef-position--center {
+		text-align: center;
+	}
+
+	&.qodef-position--left {
+		text-align: left;
+	}
+
+	&.qodef-position--right {
+		text-align: right;
+	}
+
+	&.qodef-show--yes {
+		display: block;
+	}
+
+	&.qodef-show--no {
+		display: none;
+	}
+
+	$separator-breakpoints-map: (1600, 1512, 1368, 1200, 1024, 880, 680); // match array in php file: class-protalkscore-separator-shortcode.php
+	@for $i from 0 to length($separator-breakpoints-map) {
+
+		&.qodef-show-#{nth($separator-breakpoints-map, $i+1)}#{--yes} {
+
+			@media only screen and (max-width: #{nth($separator-breakpoints-map, $i+1)}px) {
+				display: block;
+			}
+		}
+
+		&.qodef-show-#{nth($separator-breakpoints-map, $i+1)}#{--no} {
+
+			@media only screen and (max-width: #{nth($separator-breakpoints-map, $i+1)}px) {
+				display: none;
+			}
+		}
+	}
+}

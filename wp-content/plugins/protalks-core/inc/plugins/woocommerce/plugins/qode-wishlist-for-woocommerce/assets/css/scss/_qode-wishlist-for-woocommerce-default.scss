@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Qode Wishlist for WooCommerce style - begin
+   ========================================================================== */
+
+@import '../../../../../../../../../../themes/protalks/inc/woocommerce/assets/css/scss/woo-mixins';
+@import '../../../../../../../../../../themes/protalks/inc/woocommerce/assets/css/scss/woo-qi-plugins';
+
+body[class*='protalks-core'] {
+
+	.shop_table {
+
+		&.qwfw-m-items {
+			--qwfw-wt-items-font-size: 100%;
+			@include qodefWooTableStyle();
+
+			// overrides
+			thead {
+				--qwfw-wt-heading-bg-color: transparent;
+			}
+
+			th,
+			td {
+
+				&.product {
+
+					&-stock-status {
+						padding-left: 9%; // same as cart td quantity
+						white-space: nowrap
+					}
+
+					&-add-to-cart {
+						text-align: right;
+						white-space: nowrap;
+						width: 0;
+
+						a {
+							@include qodefWooButtonStyle($type: textual, $important: !important);
+
+							&.added {
+								display: none !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.qwfw-add-to-wishlist-wrapper {
+
+		// loop styles only for predefined type and position
+		&.qwfw--loop {
+
+			&.qwfw-position--shortcode.qwfw-item-type--icon {
+				@include qodefWooQiPluginsWrapperStyle($important: !important);
+
+				& {
+					left: $woo-small-gap;
+					position: absolute;
+					top: $woo-small-gap;
+				}
+
+				.qwfw-m { // a tag
+					--qwfw-atw-active-color: #{$text-color};
+					--qwfw-atw-active-hover-color: #{var(--qode-main-color)};
+					--qwfw-atw-color: #{$text-color};
+					--qwfw-atw-hover-color: #{var(--qode-main-color)};
+					@include qodefWooQiPluginsLinkStyle();
+
+					&.qwfw--added {
+
+						&:hover {
+							color: var(--qwfw-atw-active-hover-color);
+						}
+					}
+				}
+			}
+		}
+
+		// single styles for all types and positions except position: on thumbnail
+		&.qwfw--single {
+
+			&:not(.qwfw-position--on-thumbnail) {
+				margin-top: 19px;
+
+				.qwfw-m { // a tag
+
+					&:not(.button) { // button class added when button is rendered on single inside cart form
+						--qwfw-atw-active-color: #{$text-color};
+						--qwfw-atw-color: #{$text-color};
+
+						&:hover {
+							color: var(--qode-main-color);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#qode-wishlist-for-woocommerce-modal {
+		display: none !important;
+	}
+
+	.qwfw-confirm-modal {
+
+		.qwfw-m {
+
+			&-overlay {
+				background-color: $overlay-background-color;
+			}
+
+			&-close {
+				@include qodefWooQiPluginsModalCloseStyle();
+
+				& {
+					color: $heading-color;
+
+					&:hover {
+						color: var(--qode-main-color);
+					}
+				}
+			}
+
+			&-content {
+				--qwfw-border-radius: 0;
+				box-shadow: none;
+			}
+
+			&-form-button {
+				@include qodefButtonDefaultStyle();
+				@include qodefButtonSize();
+				@include qodefButtonFilledStyle();
+
+				&:hover {
+					@include qodefButtonFilledHoverStyle();
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Qode Wishlist for WooCommerce style - end
+   ========================================================================== */

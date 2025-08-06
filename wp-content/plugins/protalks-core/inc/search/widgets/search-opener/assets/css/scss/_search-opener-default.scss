@@ -1,0 +1,38 @@
+/* ==========================================================================
+# Search opener - begin
+========================================================================== */
+
+.qodef-search-opener {
+    
+    > * {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: inherit;
+    }
+    
+    &.qodef-source--icon-pack {
+        font-size: 23px;
+    }
+
+    .qodef-search-opener-text {
+        position: relative;
+        @include qodefHeadingStyle($heading: h6, $with-color: false);
+        @include qodefButtonSimpleUnderlineStyle($line-exists: false, $line-height: 1px, $line-bottom-position: 2px);
+
+        & {
+            margin-left: 2px;
+        }
+    }
+
+    &:hover {
+
+        .qodef-search-opener-text {
+            @include qodefButtonSimpleUnderlineHoverStyle();
+        }
+    }
+}
+
+/* ==========================================================================
+# Search opener - end
+========================================================================== */

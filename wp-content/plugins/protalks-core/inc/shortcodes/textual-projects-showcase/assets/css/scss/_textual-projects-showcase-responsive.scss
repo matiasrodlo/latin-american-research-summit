@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Textual Projects Showcase shortcode responsive style - begin
+   ========================================================================== */
+
+.qodef-textual-projects-showcase {
+	@include qodefScreenSize1440 {
+		.qodef-e-image {
+			width: var(--image-width1440, auto);
+		}
+	}
+	
+	@include qodefScreenSize680 {
+		.qodef-e-image {
+			width: var(--image-width680, auto);
+		}
+	}
+	
+	@include qodefScreenSize480 {
+		.qodef-e {
+			&.qodef-hide-on-mobile {
+				display: none;
+			}
+		}
+	}
+}

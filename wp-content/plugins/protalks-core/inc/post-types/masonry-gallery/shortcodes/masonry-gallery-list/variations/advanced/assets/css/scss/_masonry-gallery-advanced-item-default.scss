@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Masonry gallery shortcode variation styles
+   ========================================================================== */
+
+.qodef-masonry-gallery-list {
+
+	.qodef-item-layout--advanced {
+		.qodef-e-inner {
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+			gap: 30px;
+			padding: 50px 45px 58px 64px;
+			
+			@include qodefScreenSize1200 {
+				padding: 44px 30px;
+			}
+		}
+		
+		.qodef-e-content {
+			max-width: 62%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 30px;
+
+			@include qodefScreenSize680 {
+				max-width: 100%;
+			}
+		}
+
+		.qodef-e-top-holder {
+			padding-top: 20px;
+			padding-bottom: 39px;
+			border-bottom: 1px solid rgba(40, 54, 66, 0.3);
+
+			@include qodefScreenSize1512 {
+				padding-top: 0;
+				padding-bottom: 23px;
+			}
+		}
+		
+		.qodef-e-text {
+			margin: 12px 0 0;
+			max-width: 65%;
+			
+			@include qodefScreenSize1512 {
+				max-width: 78%;
+			}
+
+			@include qodefScreenSize1200 {
+				max-width: 95%;
+			}
+			
+			@include qodefScreenSize480 {
+				max-width: 100%;
+			}
+		}
+		
+		.qodef-e-info-holder-inner {
+			display: flex;
+			align-items: center;
+		}
+		
+		.qodef-e-media-image {
+			align-self: flex-start;
+			width: 38%;
+
+			img {
+				margin-left: auto;
+			}
+		}
+	}
+}

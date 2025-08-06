@@ -1,0 +1,7 @@
+.qodef-background-grid-lines--enabled {
+	.qodef-m-background-grid-lines {
+		@include qodefScreenSize680 {
+			display: none;
+		}
+	}
+}

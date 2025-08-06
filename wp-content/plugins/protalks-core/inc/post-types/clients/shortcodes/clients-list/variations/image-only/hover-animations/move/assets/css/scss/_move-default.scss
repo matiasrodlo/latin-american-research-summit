@@ -1,0 +1,37 @@
+/* Clients list shortcode style - start */
+.qodef-clients-list.qodef-item-layout--image-only.qodef-hover-animation--move {
+
+	.qodef-e {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.qodef-e-image {
+			line-height: 0;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+
+			a {
+				display: inline-block;
+			}
+		}
+
+		.qodef-e-logo {
+			width: auto;
+			display: inline-block;
+			@include qodefMoveVertical($move: -3px);
+		}
+
+		.qodef-e-hover-logo {
+			display: none;
+		}
+
+		&:hover {
+			.qodef-e-logo {
+				@include qodefMoveVerticalHover();
+			}
+		}
+	}
+}
+/* Clients list shortcode style - end */

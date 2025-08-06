@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Events list shortcode variation styles
+   ========================================================================== */
+
+.qodef-events-calendar {
+	
+	&.qodef-item-layout--info-table {
+		
+		.qodef-e-date {
+			margin: 0 0 15px;
+		}
+
+		.qodef-e-event-item {
+			&:not(:last-child) {
+				margin-bottom: 45px;
+			}
+		}
+
+		.qodef-info--time {
+			margin-bottom: 7px;
+		}
+
+		.qodef-e-title {
+			margin: 0 0 12px;
+		}
+
+		&.qodef-skin--light {
+			color: #fff;
+
+			.qodef-e-date,
+			.qodef-e-title {
+				color: #fff;
+			}
+
+			.qodef-e-title:hover {
+				color: #fff;
+			}
+		}
+	}
+}

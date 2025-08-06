@@ -1,0 +1,21 @@
+.qodef-team-list {
+
+	&.qodef-item-layout--info-below {
+
+		.qodef-e-content {
+			margin: 21px 0 13px;
+		}
+
+		.qodef-e {
+			.qodef-e-media-image {
+				@include qodeFilterEffect();
+			}
+
+			&:hover {
+				.qodef-e-media-image {
+					@include qodeFilterEffectHover();
+				}
+			}
+		}
+	}
+}

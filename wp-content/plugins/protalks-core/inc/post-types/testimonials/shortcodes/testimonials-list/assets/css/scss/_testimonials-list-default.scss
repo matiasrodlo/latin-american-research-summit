@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Testimonials list shortcode styles
+   ========================================================================== */
+
+.qodef-testimonials-list {
+	
+	.qodef-e-inner {
+		padding-bottom: 40px;
+	}
+	
+	.qodef-e-title {
+		margin: 0 0 27px;
+	}
+	
+	.qodef-e-text {
+		margin: 0 0 32px;
+		font-size: 20px;
+		line-height: 1.5em;
+	}
+
+	.qodef-e-info-below {
+		display: flex;
+		align-items: center;
+	}
+
+	.qodef-e-media-image {
+		flex-shrink: 0;
+		padding-right: 14px;
+		border-right: 1px solid var(--qode-second-main-color);
+
+		img {
+			width: 65px;
+			height: auto;
+			border-radius: 100%;
+		}
+	}
+
+	.qodef-e-author {
+		display: flex;
+		flex-direction: column;
+		margin-left: 21px;
+
+		.qodef-e-author-job {
+			font-size: 16px;
+			font-weight: 400;
+			margin-top: 3px;
+		}
+	}
+
+	&.qodef-skin--light {
+		.qodef-e-title,
+		.qodef-e-text,
+		.qodef-e-author {
+			color: #fff;
+		}
+	}
+}

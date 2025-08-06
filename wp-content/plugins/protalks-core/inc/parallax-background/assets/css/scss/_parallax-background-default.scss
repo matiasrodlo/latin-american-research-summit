@@ -1,0 +1,77 @@
+/* ==========================================================================
+   #Parallax Background styles - start
+   ========================================================================== */
+
+.qodef-parallax {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+
+	&.elementor-inner-section {
+		height: 100%;
+	}
+
+	&:nth-of-type(odd){
+		.qodef-parallax-img-holder {
+			--qode-y-px: calc(var(--qode-y) * 1px);
+			transform: translateY(var(--qode-y-px)) translateZ(0px);
+		}
+	}
+}
+
+.qodef-parallax-row-holder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.qodef-parallax-img-holder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 120%;
+	width: 100%;
+	opacity: 0;
+
+	.qodef-page-title & {
+		min-height: 500px;//arbitrary, needed in order for parallax effect to be visible
+	}
+}
+
+.qodef-parallax-content-holder {
+	position: relative;
+	z-index: 99;
+}
+
+.qodef-parallax-img-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	will-change: transform;
+}
+
+img.qodef-parallax-img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	object-fit: cover;
+	width: calc(100% + 1px);
+	height: 100%;
+	max-width: unset;
+
+	.elementor &{
+		height: 100%;
+		max-width: unset;
+	}
+}
+
+/* ==========================================================================
+   #Parallax Background styles - end
+   ========================================================================== */

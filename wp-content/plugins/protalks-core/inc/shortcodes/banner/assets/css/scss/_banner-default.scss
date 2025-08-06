@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Banner shortcode styles
+   ========================================================================== */
+
+.qodef-banner {
+	--banner-padding-1512: var(--banner-padding);
+	--banner-padding-880: var(--banner-padding-1512);
+	@include qodefRelativeLayout();
+	
+	.qodef-m-banner-link {
+		@include qodefAbsoluteLayout();
+		display: block;
+		z-index: 1;
+	}
+	
+	.qodef-m-content {
+		@include qodefAbsoluteLayout();
+		display: block;
+	}
+	
+	.qodef-m-content-inner {
+		@include qodefAbsoluteLayout();
+		display: flex;
+		padding: var(--banner-padding);
+	}
+	
+	.qodef-m-title {
+		margin: 10px 0 4px;
+	}
+	
+	.qodef-m-title-inner {
+		display: inline-block;
+	}
+	
+	.qodef-m-subtitle {
+		font-family: $heading-font;
+		margin: 0;
+		opacity: .5;
+		letter-spacing: 0;
+	}
+	
+	.qodef-m-text-field {
+		font-size: 15px;
+		color: var(--qode-main-color);
+		margin: 0 0 10px;
+		font-style: italic;
+	}
+	
+	.qodef-m-image {
+		@include qodefRelativeLayout();
+		overflow: hidden;
+		
+		img {
+			display: block;
+			width: 100%;
+			min-height: var(--banner-min-height, 0);
+			object-fit: cover;
+			transition: all .35s ease-out;
+		}
+	}
+
+	@include qodefScreenSize1512 {
+		.qodef-m-content-inner {
+			padding: var(--banner-padding-1512);
+		}
+	}
+
+	@include qodefScreenSize880 {
+		.qodef-m-content-inner {
+			padding: var(--banner-padding-880);
+		}
+	}
+}

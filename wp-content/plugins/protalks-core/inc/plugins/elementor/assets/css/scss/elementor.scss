@@ -1,0 +1,282 @@
+@import '../../../../../../../../themes/protalks/assets/css/scss/variables';
+@import '../../../../../../../../themes/protalks/assets/css/scss/grid-variables';
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+
+section.qodef-elementor-content-grid {
+
+    > .elementor-container,
+    > .elementor-element {
+        width: $content-grid-width-1100;
+        margin: 0 auto;
+    }
+
+    &.qodef-extended-grid {
+
+        &:not([class*="qodef-extended-grid-disabled--"]) {
+
+            > .elementor-container,
+            > .elementor-element {
+                width: 100% !important; // important to override responsive width
+                max-width: 100% !important; // important to override responsive width
+                margin: 0;
+            }
+        }
+
+        @each $key, $value in $grid-columns-layout-responsive-map {
+
+            &.qodef-extended-grid-disabled--#{$key} {
+
+                @media only screen and (min-width: #{($key + 1)}#{px}) {
+
+                    > .elementor-container,
+                    > .elementor-element {
+                        width: 100% !important; // important to override responsive width
+                        max-width: 100% !important; // important to override responsive width
+                        margin: 0;
+                    }
+                }
+
+                @media only screen and (max-width: #{$key}#{px}) {
+
+                    > .elementor-container,
+                    > .elementor-element {
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &.qodef-extended-grid--right {
+
+        > .elementor-container,
+        > .elementor-element {
+            padding-left: calc((100% - #{$content-grid-width-1100})/2);
+        }
+    }
+
+    &.qodef-extended-grid--left {
+
+        > .elementor-container,
+        > .elementor-element {
+            padding-right: calc((100% - #{$content-grid-width-1100})/2);
+        }
+    }
+
+    // Global grid style
+    @each $key, $values in $content-grid-width-map {
+
+        @media only screen and (min-width: map-deep-get($content-grid-width-map, $key, 'responsive-break')) {
+
+            .qodef-content-grid-#{$key} & {
+
+                > .elementor-container,
+                > .elementor-element {
+                    width: map-deep-get($content-grid-width-map, $key, 'content-grid-width');
+                    max-width: map-deep-get($content-grid-width-map, $key, 'content-grid-width');
+                }
+
+                &.qodef-extended-grid--right {
+
+                    > .elementor-container,
+                    > .elementor-element {
+                        padding-left: calc((100% - #{map-deep-get($content-grid-width-map, $key, 'content-grid-width')})/2);
+                    }
+                }
+
+                &.qodef-extended-grid--left {
+
+                    > .elementor-container,
+                    > .elementor-element {
+                        padding-right: calc((100% - #{map-deep-get($content-grid-width-map, $key, 'content-grid-width')})/2);
+                    }
+                }
+            }
+        }
+    }
+
+    // Global grid responsive style
+    @each $key, $values in $content-grid-width-responsive-map {
+
+        @media only screen and (max-width: map-deep-get($content-grid-width-responsive-map, $key, 'responsive-break')) {
+
+            > .elementor-container,
+            > .elementor-element {
+                width: map-deep-get($content-grid-width-responsive-map, $key, 'content-grid-width');
+            }
+
+            &.qodef-extended-grid--right {
+
+                > .elementor-container,
+                > .elementor-element {
+                    padding-left: calc((100% - #{map-deep-get($content-grid-width-responsive-map, $key, 'content-grid-width')})/2);
+                }
+            }
+
+            &.qodef-extended-grid--left {
+
+                > .elementor-container,
+                > .elementor-element {
+                    padding-right: calc((100% - #{map-deep-get($content-grid-width-responsive-map, $key, 'content-grid-width')})/2);
+                }
+            }
+        }
+    }
+}
+
+div[data-element_type="container"].qodef-elementor-content-grid {
+    width: $content-grid-width-1100;
+	margin-left: auto !important; // important to override elementor margin
+	margin-right: auto !important; // important to override elementor margin
+
+    &.qodef-extended-grid {
+
+        &:not([class*="qodef-extended-grid-disabled--"]) {
+            width: 100% !important; // important to override responsive width
+            max-width: 100% !important; // important to override responsive width
+            margin: 0;
+        }
+
+        @each $key, $value in $grid-columns-layout-responsive-map {
+
+            &.qodef-extended-grid-disabled--#{$key} {
+
+                @media only screen and (min-width: #{($key + 1)}#{px}) {
+                    width: 100% !important; // important to override responsive width
+                    max-width: 100% !important; // important to override responsive width
+                    margin: 0;
+                }
+
+                @media only screen and (max-width: #{$key}#{px}) {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+            }
+        }
+    }
+
+    &.qodef-extended-grid--right {
+        padding-left: calc((100% - #{$content-grid-width-1100})/2);
+    }
+
+    &.qodef-extended-grid--left {
+        padding-right: calc((100% - #{$content-grid-width-1100})/2);
+    }
+
+    // Global grid style
+    @each $key, $values in $content-grid-width-map {
+
+        @media only screen and (min-width: map-deep-get($content-grid-width-map, $key, 'responsive-break')) {
+
+            .qodef-content-grid-#{$key} & {
+                width: map-deep-get($content-grid-width-map, $key, 'content-grid-width');
+                max-width: map-deep-get($content-grid-width-map, $key, 'content-grid-width');
+
+                &.qodef-extended-grid--right {
+                    padding-left: calc((100% - #{map-deep-get($content-grid-width-map, $key, 'content-grid-width')})/2);
+                }
+
+                &.qodef-extended-grid--left {
+                    padding-right: calc((100% - #{map-deep-get($content-grid-width-map, $key, 'content-grid-width')})/2);
+                }
+            }
+        }
+    }
+
+    // Global grid responsive style
+    @each $key, $values in $content-grid-width-responsive-map {
+
+        @media only screen and (max-width: map-deep-get($content-grid-width-responsive-map, $key, 'responsive-break')) {
+            width: map-deep-get($content-grid-width-responsive-map, $key, 'content-grid-width');
+            max-width: map-deep-get($content-grid-width-responsive-map, $key, 'content-grid-width');
+
+            &.qodef-extended-grid--right {
+                padding-left: calc((100% - #{map-deep-get($content-grid-width-responsive-map, $key, 'content-grid-width')})/2);
+            }
+
+            &.qodef-extended-grid--left {
+                padding-right: calc((100% - #{map-deep-get($content-grid-width-responsive-map, $key, 'content-grid-width')})/2);
+            }
+        }
+    }
+}
+
+@each $key, $value in $grid-columns-layout-responsive-map {
+
+    .qodef-offset-image-disabled--#{$key} {
+
+        > .qodef-offset-image-holder {
+
+            @media only screen and (max-width: #{$key}#{px}) {
+                display: none;
+            }
+        }
+    }
+}
+
+.elementor-element,
+.elementor-column {
+
+    &.qodef-sticky-column--enable {
+        position: sticky;
+        top: 0;
+        height: max-content;
+
+        @each $key, $value in $grid-columns-layout-responsive-map {
+
+            &.qodef-sticky-column-disabled--#{$key} {
+
+                @media only screen and (max-width: #{$key}#{px}) {
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.qodef--grain-yes {
+    overflow: hidden!important;
+
+    &:after {
+        content: '' !important;
+        display: block;
+        position: absolute;
+        top: -150%;
+        left: -150%;
+        height: 500%;
+        width: 500%;
+        //--qode-background-color: #000000;
+        //background-color: var(--qode-background-color);
+        //mix-blend-mode: difference;
+        background-image: url(../../../../../../../themes/protalks/assets/img/noise.png);
+        pointer-events: none;
+    }
+
+    >.elementor-element:not(.elementor-widget-protalks_core_background_svg) {
+        z-index: 1;
+    }
+
+    &.qodef--grain-animated-yes {
+        &:after {
+            will-change: transform;
+            animation: qode-grain 2s steps(10) infinite;
+        }
+    }
+
+    &.qodef--grain-animated-no {
+        &:after {
+            opacity: .8;
+        }
+    }
+}
+.elementor-html5-video {
+    height: 100% !important;
+}

@@ -1,0 +1,45 @@
+#qodef-page-footer {
+	&.qodef-layout--predefined {
+		#qodef-page-footer-top-area {
+			#qodef-page-footer-top-area-inner {
+				.qodef-grid-inner {
+					@include qodefScreenSize1024 {
+						.qodef-grid-item {
+							&:nth-child(3),
+							&:nth-child(4) {
+								padding-top: 25px;
+							}
+						}
+					}
+
+					@include qodefScreenSize680 {
+						.qodef-grid-item {
+							&:last-child {
+								padding-bottom: 72px;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		#qodef-page-footer-bottom-area {
+			#qodef-page-footer-bottom-area-inner {
+				.qodef-grid-inner {
+
+					@include qodefScreenSize1024 {
+						flex-direction: column;
+						
+						.qodef-grid-item {
+							width: 100%;
+
+							&:not(:last-child) {
+								padding-bottom: 3px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

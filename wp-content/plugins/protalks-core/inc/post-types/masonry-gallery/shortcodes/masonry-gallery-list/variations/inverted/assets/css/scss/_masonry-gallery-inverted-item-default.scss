@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Masonry gallery shortcode variation styles
+   ========================================================================== */
+
+.qodef-masonry-gallery-list {
+
+	.qodef-item-layout--inverted {
+		
+		.qodef-e-inner {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			padding: 30px 58px 0;
+
+			@include qodefScreenSize1200 {
+				padding: 30px 30px 0;
+			}
+		}
+		
+		.qodef-e-content {
+			text-align: center;
+			align-items: center;
+			row-gap: 5px;
+			padding: 17px 0 0;
+			flex-shrink: 0;
+		}
+		
+		.qodef-e-media-image {
+			height: 1%; //This height doesn't matter since grow is set to 1
+			width: 100%;
+			flex-grow: 1;
+			border-radius: 20px 20px 0 0;
+			overflow: hidden;
+			
+			img {
+				display: block;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				object-position: top;
+			}
+		}
+
+		.qodef-e-text {
+			margin: 6px 0 0;
+		}
+		
+		&.qodef-expanded-image--enabled {
+			.qodef-e-inner {
+				gap: 0;
+				padding: 0;
+			}
+			
+			.qodef-e-content {
+				position: relative;
+				z-index: 2;
+				background-color: #fff;
+				padding: 47px 0 0;
+				
+				& > * {
+					position: relative;
+					z-index: 3;
+				}
+				
+				&:after {
+					content: '';
+					position: absolute;
+					left: -24px;
+					right: -24px;
+					top: calc(100% - 42px);
+					height: 110px;
+					background-color: inherit;
+					z-index: 2;
+					clip-path: ellipse(50% 100% at 50% 0);
+				}
+			}
+			
+			.qodef-e-media-image {
+				border-radius: 0;
+				
+				img {
+					object-position: center;
+				}
+			}
+			
+			.qodef-e-link {
+				z-index: 3;
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+/* Clients list shortcode style - start */
+.qodef-clients-list {
+
+	&.qodef-item-appearance--boxed {
+
+		.qodef-e {
+			padding: 10%;
+			border: 1px solid rgba($heading-color, 0.25);
+		}
+	}
+
+	.qodef-e {
+		@include qodefRelativeLayout();
+	}
+
+	&.qodef-swiper-container {
+
+		.swiper-wrapper {
+			align-items: center;
+		}
+
+		.swiper-slide {
+			img {
+				width: revert-layer;
+			}
+		}
+	}
+}
+/* Clients list shortcode style - end */

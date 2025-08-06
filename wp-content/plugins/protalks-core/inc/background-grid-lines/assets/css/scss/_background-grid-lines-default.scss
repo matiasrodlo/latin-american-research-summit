@@ -1,0 +1,19 @@
+.qodef-background-grid-lines--enabled {
+	.qodef-m-background-grid-lines {
+		@include qodefAbsoluteLayout();
+		z-index: -1;
+		pointer-events: none;
+		--qode-grid-lines-color: #{$heading-color};
+		position: fixed;
+
+		.qodef-m-background-grid-line {
+			position: absolute;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background-color: var(--qode-grid-lines-color);
+
+			@include qodefLineDecoration();
+		}
+	}
+}

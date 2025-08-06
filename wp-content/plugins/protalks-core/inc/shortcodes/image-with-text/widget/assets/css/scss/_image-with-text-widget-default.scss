@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Image With Text widget styles
+   ========================================================================== */
+
+$wp-widgets-area-map: (
+		'#qodef-page-sidebar': (
+				margin-bottom: 0
+		),
+		'#qodef-page-footer': (
+				margin-bottom: -1px
+		),
+		'#qodef-side-area': (
+				margin-bottom: 0
+		)
+);
+.widget.widget_protalks_core_image_with_text {
+	@each $key, $values in $wp-widgets-area-map {
+		#{$key} & {
+			margin-bottom: map-get($values, 'margin-bottom');
+		}
+	}
+}

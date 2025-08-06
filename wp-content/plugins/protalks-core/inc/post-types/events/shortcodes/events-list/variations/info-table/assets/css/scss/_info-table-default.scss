@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Events list shortcode variation styles
+   ========================================================================== */
+
+.qodef-events-list {
+
+	&.qodef-item-layout--info-table {
+		--qode-columns-row-gap: 0;
+		--qode-event-info-table-border-color: #283642;
+
+		.qodef-e-inner {
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 20px;
+
+			@include qodefScreenSize880 {
+				flex-direction: column;
+			}
+		}
+
+		.qodef-grid-item {
+			padding: 40px 0;
+			border-bottom: 1px solid var(--qode-event-info-table-border-color);
+
+			&:first-child {
+				border-top: 1px solid var(--qode-event-info-table-border-color);
+			}
+		}
+
+		.qodef-e-date-time {
+			flex: 1;
+		}
+
+		.qodef-e-date {
+			@include qodefAdditionalInfoStyle();
+
+			& {
+				flex-shrink: 0;
+				margin-right: 14px;
+			}
+		}
+
+		.qodef-e-tickets-link {
+			align-self: center;
+			display: inline-flex;
+			justify-content: flex-end;
+			flex: 0.7;
+			flex-shrink: 0;
+
+			@include qodefScreenSize1200 {
+				flex: 0.4;
+			}
+
+			@include qodefScreenSize880 {
+				align-self: flex-start;
+			}
+		}
+
+		.qodef-e-heading {
+			position: relative;
+			display: flex;
+			align-items: center;
+			flex: 1.4;
+			justify-content: space-between;
+
+			.qodef-e-speaker-image {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				translate: 0 -50%;
+				transform: scale(.9);
+				opacity: 0;
+				border-radius: 50%;
+				transition: opacity .2s ease-out, transform .2s ease;
+				overflow: hidden;
+			}
+
+			@include qodefScreenSize1512 {
+				//flex: 1.4;
+
+				.qodef-e-speaker-image {
+					max-width: 120px;
+				}
+			}
+
+			@include qodefScreenSize1024 {
+				flex: 1.8;
+			}
+
+			@include qodefScreenSize880 {
+				width: 100%;
+			}
+		}
+
+		.qodef-grid-item:hover {
+			.qodef-e-heading {
+				.qodef-e-speaker-image {
+					opacity: 1;
+					transform: scale(1);
+					transition-duration: .3s, .45s;
+					transition-delay: .1s,.1s;
+				}
+			}
+		}
+
+		&.qodef-skin--light {
+			--qode-event-info-table-border-color: #fff;
+			--qode-button-color: #fff;
+			--qode-button-hover-color: #fff;
+			color: #fff;
+
+			.qodef-e-date,
+			.qodef-e-title {
+				color: #fff;
+			}
+
+			a:hover {
+				color: #fff;
+			}
+		}
+	}
+}

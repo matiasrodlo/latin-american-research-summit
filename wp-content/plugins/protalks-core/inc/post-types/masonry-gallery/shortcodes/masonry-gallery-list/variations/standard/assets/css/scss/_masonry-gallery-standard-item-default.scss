@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Masonry gallery shortcode variation styles
+   ========================================================================== */
+
+.qodef-masonry-gallery-list {
+
+	.qodef-item-layout--standard {
+		
+		.qodef-e-inner {
+			display: flex;
+			flex-direction: column;
+			row-gap: 36px;
+			padding: 58px;
+
+			@include qodefScreenSize1200 {
+				padding: 44px 30px;
+			}
+		}
+		
+		.qodef-e-media-image {
+			height: 1%; //This height doesn't matter since grow is set to 1
+			flex-grow: 1;
+			
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.qodef-e-content {
+			flex-shrink: 0;
+		}
+		
+		.qodef-e-button {
+			margin: 38px 0 0;
+		}
+	}
+}

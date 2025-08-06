@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Social Share widget styles
+   ========================================================================== */
+
+$wp-widgets-area-map: (
+	'#qodef-page-sidebar': (
+		text-color: null
+	),
+	'#qodef-top-area': (
+		text-color: #fff
+	),
+	'#qodef-page-footer': (
+		text-color: #fff
+	),
+	'#qodef-side-area': (
+		text-color: #fff
+	)
+);
+.qodef-social-share {
+
+	.widget & {
+		&.qodef-layout--list {
+			.qodef-social-title {
+				display: block;
+				margin-bottom: 21px;
+			}
+		}
+
+		&.qodef-layout--text {
+			.qodef-social-title {
+				display: block;
+				margin-bottom: 21px;
+			}
+		}
+	}
+
+	@each $key, $values in $wp-widgets-area-map {
+		#{$key} .widget & {
+			&.qodef-layout--list {
+				.qodef-social-title {
+					color: map-get($values, 'text-color');
+				}
+			}
+			&.qodef-layout--text {
+				.qodef-social-title {
+					color: map-get($values, 'text-color');
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Social Share widget styles
+   ========================================================================== */

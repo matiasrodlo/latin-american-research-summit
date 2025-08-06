@@ -1,0 +1,48 @@
+.qodef-countdown.qodef-layout--simple {
+
+	&.qodef-size--smaller {
+
+		.qodef-digit {
+			font-size: 30px;
+		}
+
+		.qodef-label {
+			font-size: 16px;
+		}
+	}
+
+	.qodef-digit-wrapper {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 20px;
+	}
+
+	.qodef-digit {
+		font-family: inherit;
+		font-size: 90px;
+		line-height: 1em;
+		font-weight: 500;
+		color: $heading-color;
+
+		@include qodefScreenSize680 {
+			font-size: 70px;
+		}
+
+		@include qodefScreenSize480 {
+			font-size: 50px;
+		}
+	}
+
+	.qodef-label {
+		margin: 4px 0 0;
+		font-size: 26px;
+
+		@include qodefScreenSize680 {
+			font-size: 22px;
+		}
+
+		@include qodefScreenSize480 {
+			font-size: 16px;
+		}
+	}
+}

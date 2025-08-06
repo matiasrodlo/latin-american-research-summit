@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Image With Text shortcode styles
+   ========================================================================== */
+
+.qodef-image-with-text {
+	@include qodefRelativeLayout();
+
+	.qodef-m-image {
+		@include qodefRelativeLayout();
+
+		a, img {
+			display: block;
+		}
+	}
+
+	.qodef-m-content {
+		@include qodefRelativeLayout();
+	}
+
+	.qodef-m-title {
+		margin: 31px 0 0;
+	}
+
+	span.qodef-m-title {
+		display: block;
+		font-size: 20px;
+		@include qodefHeadingItalicStyle();
+	}
+
+	.qodef-m-text {
+		margin: 15px 0 0;
+	}
+
+	&.qodef-content-alignment--left {
+		text-align: left;
+	}
+
+	&.qodef-content-alignment--center {
+		text-align: center;
+	}
+
+	&.qodef-content-alignment--right {
+		text-align: right;
+	}
+
+	&.qodef--shadow {
+
+		.qodef-m-image img {
+			box-shadow: $box-shadow;
+		}
+	}
+
+	&.qodef--has-hover {
+		.qodef-m-image {
+			transition: transform .5s ease;
+			--qode-y: -5px;
+			transform: translateY(0px);
+		}
+
+
+		&:hover {
+			.qodef-m-image {
+				transform: translateY(var(--qode-y));
+			}
+		}
+	}
+
+	&.qodef--has-appear {
+		.qodef-m-inner {
+			@include qodefTranslateWithOpacity();
+		}
+
+		&.qodef--appeared {
+			.qodef-m-inner {
+				@include qodefTranslateWithOpacityHover();
+			}
+		}
+	}
+}
+
+.qodef-header-navigation {
+	.qodef-drop-down-second {
+		ul {
+			li {
+				.qodef-image-with-text {
+					.qodef-m-title {
+						a {
+							@include qodefInlineUnderline($position-y: 100%);
+						}
+					}
+
+					.qodef-m-image {
+						--qode-y: 0px;
+					}
+				}
+
+				&:hover {
+					.qodef-image-with-text {
+						.qodef-m-title {
+							a {
+								@include qodefInlineUnderlineActive();
+							}
+						}
+					}
+				}
+
+				&.current-menu-item {
+					.qodef-image-with-text {
+						.qodef-m-title {
+							a {
+								@include qodefInlineUnderlineActive();
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

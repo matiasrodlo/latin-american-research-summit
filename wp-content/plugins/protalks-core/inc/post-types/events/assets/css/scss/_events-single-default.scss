@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Events Single styles
+   ========================================================================== */
+
+.qodef-events {
+    @include qodefRelativeLayout();
+    
+    .qodef-event-item {
+        @include qodefRelativeLayout();
+    }
+    
+    .qodef-m-inner {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        
+        > * {
+            position: relative;
+            width: 100%;
+        }
+
+        > .qodef-e-image {
+            margin-bottom: 30px;
+        }
+
+        > .qodef-m-info {
+            display: flex;
+            align-items: center;
+
+            .qodef-info--event-types {
+                @include qodefAdditionalInfoStyle();
+            }
+
+            @include qodefScreenSize680 {
+                flex-direction: column;
+                align-items: flex-start;
+
+                > .qodef-info-separator-end {
+                    display: none;
+                }
+            }
+        }
+
+        > .qodef-e-title {
+            margin: 0 0 8px;
+        }
+
+        > .qodef-e-tickets-link {
+            margin-top: 47px;
+        }
+    }
+
+    .qodef-m-speaker-holder {
+        margin-top: 90px;
+
+        .qodef-m-speaker-title {
+            margin: 0 0 28px;
+        }
+
+        @include qodefScreenSize1200 {
+            margin-top: 64px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Qode Quick View for WooCommerce responsive style - begin
+   ========================================================================== */
+
+
+body[class*=lynna-core] {
+
+	@include qodefScreenSize880() {
+
+		.qodef-woo-product-list {
+
+			&:has(.qwfw-add-to-wishlist-wrapper) {
+
+				.qqvfw-quick-view-button-wrapper {
+					top: #{$woo-small-gap-responsive * 2};
+				}
+			}
+		}
+
+		.qqvfw-quick-view-button-wrapper {
+
+			&:has(.button), // free
+			&:has(.qqvfw-position--shortcode) { // premium
+				left: $woo-small-gap-responsive;
+				top: $woo-small-gap-responsive;
+			}
+		}
+
+		.qqvfw-m {
+
+			&-media-wrapper {
+				max-height: 30vh;
+				width: 100% !important;
+			}
+
+			&-summary-wrapper {
+
+				.summary {
+					padding: 0 30px 30px 30px !important;
+				}
+
+				.woocommerce-product-details__short-description {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Qode Quick View for WooCommerce responsive style - end
+   ========================================================================== */

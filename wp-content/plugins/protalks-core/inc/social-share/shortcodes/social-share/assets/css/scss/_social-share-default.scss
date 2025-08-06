@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Social Share shortcode styles
+   ========================================================================== */
+
+.qodef-social-share {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	.qodef-social-title {
+		@include qodefHeadingStyle($heading: h6);
+
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 5px 0 0;
+	}
+
+	ul {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+		padding: 0;
+		margin: 0;
+
+		a {
+			font-size: 18px;
+			color: $text-color;
+			opacity: 0.5;
+			transition: opacity $transition-timing;
+
+			&:hover {
+				color: $text-color;
+				opacity: 1;
+			}
+		}
+	}
+
+	&.qodef-predefined-icons {
+		a {
+			font-size: initial;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			border: 1px solid $border-color;
+			will-change: transform;
+		}
+
+		svg {
+			display: block;
+		}
+	}
+}
+
+/* ==========================================================================
+   Social Share shortcode styles
+   ========================================================================== */

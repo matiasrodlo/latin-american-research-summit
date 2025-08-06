@@ -1,0 +1,184 @@
+/* ==========================================================================
+   #Footer styles - start
+   ========================================================================== */
+
+#qodef-page-footer {
+
+	.qodef-alignment--left {
+		text-align: left;
+
+		.widget {
+
+			img {
+				margin-right: auto;
+			}
+		}
+	}
+
+	.qodef-alignment--center {
+		text-align: center;
+
+		.widget {
+
+			img {
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+
+	.qodef-alignment--right {
+		text-align: right;
+
+		.widget {
+
+			img {
+				margin-left: auto;
+			}
+		}
+	}
+
+	&.qodef-layout--predefined {
+		overflow: hidden;
+
+		.qodef-grid-inner {
+			gap: 0;
+		}
+
+		#qodef-page-footer-top-area {
+
+			#qodef-page-footer-top-area-inner {
+				padding: 0;
+
+				.qodef-grid-item {
+					position: relative;
+					padding: 82px 50px 42px;
+
+					&:before {
+						content: '';
+						position: absolute;
+						right: 0;
+						top: 0;
+						height: 300%;
+						width: 1px;
+						background-color: rgba(255,255,255,0.5);
+					}
+
+					@include qodefLineDecoration($color:var(--qode-second-main-color), $end-pos: 75vH, $duration: 4.5s);
+
+					@include qodefScreenSize1200 {
+						padding-left: 30px;
+						padding-right: 30px;
+					}
+
+					@include qodefScreenSize680 {
+						padding-left: 7%;
+						padding-right: 7%;
+					}
+				}
+			}
+		}
+
+		#qodef-page-footer-bottom-area {
+			#qodef-page-footer-bottom-area-inner {
+				padding: 0;
+
+				.qodef-grid-inner {
+					display: flex;
+					justify-content: space-between;
+
+					.qodef-grid-item {
+						width: 25%;
+						padding: 0 50px 40px;
+
+						@include qodefScreenSize1200 {
+							padding: 0 30px 40px;
+						}
+
+						@include qodefScreenSize1024 {
+							width: 50%;
+						}
+
+						@include qodefScreenSize680 {
+							padding-left: 7%;
+							padding-right: 7%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.qodef-style--predefined {
+		overflow: hidden;
+
+		&:after {
+			@include qodefGrainEffect();
+		}
+
+		.qodef-background-svg {
+			position: absolute;
+
+			&.qodef-animation--path-2 {
+				width: 10px;
+				bottom: 0;
+				margin-top: -10%;
+				margin-left: -4%;
+			}
+
+			&.qodef-animation--path-1 {
+				width: 10px;
+				top: 0;
+				right: 0%;
+				margin-top: -13%;
+				margin-left: 10%;
+			}
+		}
+	}
+}
+
+#qodef-page-footer-top-area-inner,
+#qodef-page-footer-bottom-area-inner {
+
+	.qodef-grid {
+
+		&.qodef-gutter--custom {
+			--qode-columns-row-gap: var(--qode-columns-col-gap);
+		}
+	}
+}
+
+#qodef-page-footer-bottom-area-inner {
+
+	.qodef-alignment--space-between {
+
+		.qodef-grid-item {
+
+			&:nth-child(2) {
+
+				@media (min-width: $screen-size-881) {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+.qodef-page-footer--uncover {
+
+	#qodef-page-outer {
+		z-index: 90; // needs to be larger than the footer and lower than the header
+	}
+
+	#qodef-page-footer {
+
+		.no-touchevents & {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+/* ==========================================================================
+   #Footer styles - end
+   ========================================================================== */

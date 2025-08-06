@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Qode Quick View for WooCommerce style - begin
+   ========================================================================== */
+
+@import '../../../../../../../../../../themes/protalks/inc/woocommerce/assets/css/scss/woo-mixins';
+@import '../../../../../../../../../../themes/protalks/inc/woocommerce/assets/css/scss/woo-qi-plugins';
+
+body[class*='protalks-core'] {
+
+	.qodef-woo-product-list {
+
+		&:has(.qwfw-add-to-wishlist-wrapper) {
+
+			.qqvfw-quick-view-button-wrapper {
+				top: #{$woo-small-gap * 2};
+				transform: translateY(100%);
+			}
+		}
+	}
+
+	.qqvfw-quick-view-button-wrapper {
+
+		&:has(.button), // free
+		&:has(.qqvfw-position--shortcode) { // premium
+			@include qodefWooQiPluginsWrapperStyle($important: !important);
+
+			& {
+				left: $woo-small-gap;
+				position: absolute;
+				top: $woo-small-gap;
+			}
+
+			.qqvfw-m { // a tag
+				@include qodefWooQiPluginsLinkStyle();
+
+				& {
+					color: $text-color;
+
+					&:hover {
+						color: var(--qode-main-color);
+					}
+				}
+
+				&-text {
+					display: none;
+				}
+			}
+		}
+	}
+
+	#qode-quick-view-for-woocommerce-pop-up {
+
+		.qqvfw-m {
+
+			&-overlay {
+				--qqvfw-qv-overlay-background-color: #{$overlay-background-color};
+			}
+
+			&-close {
+				--qqvfw-qv-close-button-color: #{$heading-color};
+				@include qodefWooQiPluginsModalCloseStyle();
+
+				&:hover {
+					color: var(--qode-main-color);
+				}
+			}
+
+			&-content {
+				// height: auto !important;
+				max-width: 90vw !important;
+				--qqvfw-qv-width: 1000px;
+
+				&-inner {
+					border-radius: 0;
+					box-shadow: none !important;
+					max-height: 90vh !important;
+					overflow-y: hidden !important;
+				}
+			}
+
+			&-product {
+
+				> div {
+					gap: 35px;
+				}
+			}
+
+			&-media-wrapper {
+				width: 476px !important;
+
+				*:not(.qodef-woo-product-mark) {
+					height: 100%;
+				}
+
+				.woocommerce-product-gallery {
+					pointer-events: none;
+
+					&__wrapper {
+						margin: 0 !important;
+
+						img {
+							object-fit: cover;
+						}
+
+						> .woocommerce-product-gallery__image {
+							margin: 0 !important;
+							width: 100% !important;
+
+							.zoomImg {
+								display: none !important;
+							}
+
+							&:not(:first-child) {
+								display: none !important;
+							}
+						}
+
+						> .qodef-woo-thumbnails-wrapper {
+							display: none !important;
+						}
+					}
+
+					&__trigger {
+						display: none;
+					}
+				}
+			}
+
+			&-summary-wrapper {
+				align-self: center;
+				width: 100% !important;
+
+				.summary {
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					padding: 56px 115px 56px 0 !important;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Qode Quick View for WooCommerce style - end
+   ========================================================================== */

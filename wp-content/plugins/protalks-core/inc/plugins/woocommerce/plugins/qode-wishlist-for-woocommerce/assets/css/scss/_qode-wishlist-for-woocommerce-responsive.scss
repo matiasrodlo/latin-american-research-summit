@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Qode Wishlist for WooCommerce responsive style - begin
+   ========================================================================== */
+
+body[class*='protalks-core'] {
+
+	.qwfw-add-to-wishlist-wrapper {
+
+		@include qodefScreenSize880() {
+
+			// loop styles only for predefined type and position
+			&.qwfw--loop {
+
+				&.qwfw-position--shortcode.qwfw-item-type--icon {
+					left: $woo-small-gap-responsive;
+					top: $woo-small-gap-responsive;
+				}
+			}
+		}
+	}
+
+	.shop_table {
+		$thumb-size: 50px;
+
+		&.qwfw-m-items {
+
+			@include qodefScreenSize880() {
+
+				tr {
+					grid-template-columns: minmax(0, #{$woo-cart-remove-size + $woo-small-gap-responsive}) minmax(0, $thumb-size) minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) !important;
+					padding: $woo-small-gap-responsive 0;
+				}
+
+				td {
+
+					&.product {
+
+						&-price {
+							align-self: initial;
+						}
+
+						&-stock-status {
+							grid-row: span 2;
+							justify-self: start;
+						}
+
+						&-add-to-cart {
+							gap: $woo-small-gap-responsive;
+							grid-row: span 2;
+							justify-self: end;
+							white-space: nowrap; // force button text in one line
+
+							a {
+								justify-self: end;
+
+								&.remove_from_wishlist {
+									margin-left: 0 !important;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			@include qodefScreenSize680() {
+
+				th {
+
+					&.product {
+
+						&-stock-status {
+							display: none;
+						}
+					}
+				}
+
+				tr {
+					grid-template-columns: minmax(0, #{$woo-cart-remove-size + $woo-small-gap-responsive}) minmax(0, $thumb-size) minmax(0, 1fr) min-content !important;
+				}
+
+				td {
+
+					&.product {
+
+						&-remove {
+							grid-row: span 3;
+						}
+
+						&-thumbnail {
+							grid-row: span 3;
+						}
+
+						&-stock-status {
+							grid-column: 3;
+							grid-row: 3;
+							padding: #{calc($woo-small-gap-responsive / 2)} 0 #{calc($woo-small-gap-responsive / 2)} $woo-small-gap-responsive !important;
+						}
+
+						&-add-to-cart {
+							grid-row: span 3;
+						}
+					}
+				}
+			}
+
+			@include qodefScreenSize480() {
+
+				tr {
+					grid-template-columns: minmax(0, #{$woo-cart-remove-size + $woo-small-gap-responsive}) minmax(0, $thumb-size) minmax(0, 1fr) !important;
+				}
+
+				td {
+
+					&.product {
+
+						&-add-to-cart {
+							grid-column: 3;
+							grid-row: 4;
+							justify-self: flex-start;
+							padding: #{calc($woo-small-gap-responsive / 2)} 0 #{calc($woo-small-gap-responsive / 2)} $woo-small-gap-responsive !important;
+							text-align: initial;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Qode Wishlist for WooCommerce responsive style - end
+   ========================================================================== */

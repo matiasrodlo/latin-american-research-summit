@@ -1,0 +1,61 @@
+.qodef-team-list {
+
+	&.qodef-item-layout--side-by-side {
+
+		.qodef-e-inner {
+			display: flex;
+			align-items: center;
+		}
+
+		.qodef-e-image {
+			width: 35%;
+			flex-shrink: 0;
+		}
+
+		.qodef-e-content {
+			width: 65%;
+			padding: 0 0 0 55px;
+		}
+
+		.qodef-e-role {
+	        @include qodefAdditionalInfoStyle();
+
+	        & {
+	            margin: 0 0 5px;
+	        }
+	    }
+
+		.qodef-social-icon {
+	        @include qodefSocialIconsStyle();
+	    }
+
+		.qodef-e-section {
+
+			&.qodef-e-additional-content {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				margin: 46px 0 0;
+
+				.qodef-e-title {
+	                margin: 0 0 15px;
+	            }
+
+	            .qodef-e-section-item {
+	                margin: 0 0 2px;
+	                line-height: 1.5em;
+
+	                &:last-of-type {
+	                    margin: 0;
+	                }
+	            }
+
+				.qodef-e-contact-info {
+					a {
+						@include qodefInlineUnderline($hover: true);
+					}
+				}
+			}
+		}
+	}
+}

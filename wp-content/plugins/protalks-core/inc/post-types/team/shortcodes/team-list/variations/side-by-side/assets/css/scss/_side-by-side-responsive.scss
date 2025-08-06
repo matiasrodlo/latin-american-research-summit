@@ -1,0 +1,41 @@
+.qodef-team-list {
+	
+	&.qodef-item-layout--side-by-side {
+
+		@include qodefScreenSize1200 {
+			.qodef-e-section {
+
+				&.qodef-e-additional-content {
+					justify-content: flex-start;
+					gap: clamp(15%, 80px, 80%);
+				}
+			}
+		}
+
+		@include qodefScreenSize880 {
+
+			.qodef-e-inner {
+				flex-direction: column;
+			}
+
+			.qodef-e-image {
+				width: 100%;
+			}
+
+			.qodef-e-content {
+				width: 100%;
+				padding: 30px 0 0 0;
+			}
+		}
+
+		@include qodefScreenSize680 {
+			.qodef-e-section {
+
+				&.qodef-e-additional-content {
+					flex-direction: column;
+					gap: 30px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Product Category List Info on Image styles
+   ========================================================================== */
+
+.qodef-woo-product-category-list.qodef-item-layout--info-on-image, // our shortcode wrapper
+.qodef-woo-product-list { // woo shortcode wrapper
+    .product-category {
+        a {
+            @include qodefRelativeLayout();
+
+            &:hover {
+
+                .woocommerce-loop-category__title {
+                    color: #fff;
+                    background-color: var(--qode-main-color);
+                    //opacity: 1;
+                }
+            }
+        }
+
+        .woocommerce-loop-category__title {
+            color: $heading-color;
+            background-color: #fff;
+            left: 50%;
+            margin: 0;
+            padding: 12px 41px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            //opacity: 0;
+            transition: $color-transition, $background-color-transition, $opacity-transition;
+        }
+    }
+
+    .count {
+        display: none;
+    }
+}

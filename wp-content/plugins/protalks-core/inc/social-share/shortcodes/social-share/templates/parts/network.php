@@ -1,0 +1,17 @@
+<li class="qodef-<?php echo esc_html( $name ); ?>-share">
+	<a itemprop="url" class="qodef-share-link" href="#" onclick="<?php echo esc_attr( $link ); ?>">
+		<?php if ( 'text' === $layout ) { ?>
+			<span class="qodef-social-network-text"><?php echo esc_html( $text ); ?></span>
+		<?php } elseif ( 'yes' === $predefined_svg_icons ) { ?>
+			<?php
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo qode_framework_wp_kses_html( 'svg', $icon );
+			?>
+		<?php } else { ?>
+			<?php
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo qode_framework_wp_kses_html( 'html', $icon );
+			?>
+		<?php } ?>
+	</a>
+</li>

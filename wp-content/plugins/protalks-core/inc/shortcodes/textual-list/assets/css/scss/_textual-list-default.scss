@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Textual List shortcode styles
+   ========================================================================== */
+
+.qodef-textual-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 19px;
+
+	.qodef-textual-list-item {
+		@include qodefHeadingStyle($heading: h6);
+		margin: 0;
+
+		a {
+            @include qodefInlineUnderline();
+
+			&:hover {
+				@include qodefInlineUnderlineActive();
+			}
+        }
+	}
+}

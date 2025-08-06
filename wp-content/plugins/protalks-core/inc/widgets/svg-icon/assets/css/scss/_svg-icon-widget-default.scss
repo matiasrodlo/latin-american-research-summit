@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Button widget styles
+   ========================================================================== */
+
+.widget_protalks_core_svg_icon {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 !important;
+}
+
+.qodef-svg-icon-widget {
+
+	.qodef-m-holder {
+		display: flex;
+		align-items: center;
+	}
+
+	svg {
+		display: block;
+		fill: var(--fill-color);
+		stroke: var(--stroke-color);
+		max-width: 100%;
+		max-height: 100%;
+		transition: all .25s ease-out;
+	}
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		.qodef-m-text {
+			padding: 1px 0px;
+			@include qodefInlineUnderline($position-y: 100%);
+		}
+
+		&:hover {
+			.qodef-m-text {
+				@include qodefInlineUnderlineActive();
+			}
+		}
+	}
+
+	&:hover,
+	a:hover {
+		svg {
+			fill: var(--fill-hover-color);
+			stroke: var(--stroke-hover-color);
+		}
+
+		.qodef-m-text {
+			color: var(--text-hover-color);
+		}
+	}
+
+	&:hover {
+		.qodef-m-icon {
+			background-color: var(--background-hover-color);
+		}
+	}
+
+	.qodef-m-icon {
+		--fill-color: currentColor;
+		--stroke-color: currentColor;
+		--fill-hover-color: currentColor;
+		--stroke-hover-color: currentColor;
+		--background-color: transparent;
+		--background-hover-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		max-height: 100%;
+		background-color: var(--background-color);
+		transition: all .25s ease-out;
+	}
+
+	.qodef-m-text {
+		--text-font-size: inherit;
+		--text-color: currentColor;
+		--text-hover-color: currentColor;
+		font-size: var(--text-font-size);
+		color: var(--text-color);
+		transition: all .25s ease-out;
+		line-height: 1;
+	}
+}

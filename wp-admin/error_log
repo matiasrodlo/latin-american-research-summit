@@ -1,0 +1,17 @@
+[05-Aug-2025 09:32:29 UTC] PHP Warning:  Undefined array key "editor_post_id" in /home/meyzjcmc/latamresearch.org/wp-content/plugins/elementor/modules/history/revisions-manager.php on line 363
+[05-Aug-2025 09:54:39 UTC] PHP Warning:  Attempt to read property "labels" on bool in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 09:54:39 UTC] PHP Warning:  Attempt to read property "no_terms" on null in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 11:34:22 UTC] PHP Warning:  Attempt to read property "labels" on bool in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 11:34:22 UTC] PHP Warning:  Attempt to read property "no_terms" on null in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 11:37:24 UTC] PHP Warning:  Attempt to read property "labels" on bool in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 11:37:24 UTC] PHP Warning:  Attempt to read property "no_terms" on null in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:02:10 UTC] PHP Warning:  Attempt to read property "labels" on bool in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:02:10 UTC] PHP Warning:  Attempt to read property "no_terms" on null in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:06:00 UTC] PHP Warning:  Attempt to read property "labels" on bool in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:06:00 UTC] PHP Warning:  Attempt to read property "no_terms" on null in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:06:50 UTC] PHP Warning:  Attempt to read property "labels" on bool in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:06:50 UTC] PHP Warning:  Attempt to read property "no_terms" on null in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:07:25 UTC] PHP Warning:  Attempt to read property "labels" on bool in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:07:25 UTC] PHP Warning:  Attempt to read property "no_terms" on null in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:09:21 UTC] PHP Warning:  Attempt to read property "labels" on bool in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67
+[05-Aug-2025 12:09:21 UTC] PHP Warning:  Attempt to read property "no_terms" on null in /home/meyzjcmc/latamresearch.org/wp-includes/blocks/categories.php on line 67

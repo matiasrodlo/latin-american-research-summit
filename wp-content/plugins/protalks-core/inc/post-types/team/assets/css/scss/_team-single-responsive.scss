@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Team Single styles
+   ========================================================================== */
+
+.qodef-team-single {
+
+    @include qodefScreenSize1512 {
+        .qodef-e-inner {
+            .qodef-e-content {
+                padding: 0 6% 0 60px;
+            }
+        }
+    }
+
+    @include qodefScreenSize1368 {
+        .qodef-e-inner {
+            align-items: flex-start;
+        }
+    }
+
+    @include qodefScreenSize1200 {
+        .qodef-e-inner {
+            .qodef-e-content {
+                padding-right: 0;
+                padding-left: 40px;
+            }
+        }
+    }
+
+    @include qodefScreenSize880 {
+
+        .qodef-e-inner {
+            flex-direction: column;
+
+            .qodef-e-image {
+                width: 100%;
+            }
+
+            .qodef-e-content {
+                width: 100%;
+                padding: 60px 0 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Icon List Item shortcode styles
+   ========================================================================== */
+
+.qodef-icon-list-item {
+	--qode-ili-gap: 5px;
+	@include qodefRelativeLayout();
+	line-height: 1;
+
+	.qodef-e-title {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		line-height: 1.625;
+
+		a {
+			display: block;
+		}
+	}
+
+	.qodef-e-title-inner {
+		display: flex;
+		align-items: baseline;
+		gap: var(--qode-ili-gap);
+	}
+
+	.qodef-icon-holder {
+		flex-shrink: 0;
+		margin-right: 5px;
+		float: none;
+
+		.qodef-icon {
+			font-size: $text-font-size;
+		}
+	}
+
+	&.qodef-icon--custom-icon {
+
+		.qodef-e-icon-wrapper {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+
+			a, img {
+				display: block;
+			}
+		}
+	}
+}

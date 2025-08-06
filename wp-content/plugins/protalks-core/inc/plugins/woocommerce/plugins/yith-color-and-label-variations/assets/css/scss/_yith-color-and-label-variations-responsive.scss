@@ -1,0 +1,26 @@
+.qodef-yith-wccl--predefined {
+
+	@include qodefScreenSize1200() {
+
+		// product single, variable product
+		form.cart {
+
+			.variations {
+
+				&:has(tr[class*="description_attribute"]) {
+
+					tr[class^="description_attribute"] {
+
+						td {
+							padding-top: $woo-small-gap-responsive;
+						}
+					}
+
+					.reset_variations {
+						transform: translateY(calc(-50% - #{$woo-small-gap-responsive} / 2));
+					}
+				}
+			}
+		}
+	}
+}

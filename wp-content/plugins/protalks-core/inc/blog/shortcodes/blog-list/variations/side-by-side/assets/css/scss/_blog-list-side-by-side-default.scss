@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Blog List Side By Side styles
+   ========================================================================== */
+
+.qodef-blog {
+
+	&.qodef-item-layout--side-by-side {
+
+		article {
+
+			.qodef-e-inner {
+				align-items: flex-start;
+				display: flex;
+			}
+
+			.qodef-e-media {
+				flex-shrink: 0;
+				margin-right: 20px;
+				width: 120px;
+			}
+
+			.qodef-e-content {
+				margin: 0;
+			}
+
+			.qodef-e-bottom-holder {
+				margin-top: 5px;
+			}
+		}
+	}
+}

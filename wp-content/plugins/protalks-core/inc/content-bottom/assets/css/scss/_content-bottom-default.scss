@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #Content Bottom styles - start
+   ========================================================================== */
+
+#qodef-page-content-bottom {
+	@include qodefRelativeLayout();
+	background-color: $additional-background-color;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	> .qodef-m-inner {
+		padding: 60px 0;
+	}
+
+	.qodef-content-full-width {
+		padding-left: $side-padding-large;
+		padding-right: $side-padding-large;
+	}
+
+	.qodef--boxed & {
+		padding-left: $boxed-grid-padding-size;
+		padding-right: $boxed-grid-padding-size;
+	}
+}
+
+/* ==========================================================================
+   #Content Bottom styles - end
+   ========================================================================== */

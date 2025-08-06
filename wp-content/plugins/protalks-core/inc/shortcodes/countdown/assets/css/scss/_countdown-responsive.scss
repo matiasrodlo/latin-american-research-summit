@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Countdown shortcode styles
+   ========================================================================== */
+
+.qodef-countdown {
+
+	&.qodef-size--smaller {
+
+		@include qodefScreenSize680() {
+			&.qodef-show--4 {
+
+				.qodef-digit-wrapper {
+					width: 50%;
+				}
+			}
+
+			&.qodef-show--5,
+			&.qodef-show--6 {
+
+				.qodef-digit-wrapper {
+					width: 33.33333333333333%;
+				}
+			}
+		}
+	}
+
+	&:not(.qodef-size--smaller) {
+
+		@include qodefScreenSize1024() {
+			&.qodef-show--4 {
+
+				.qodef-digit-wrapper {
+					width: 50%;
+				}
+			}
+
+			&.qodef-show--5,
+			&.qodef-show--6 {
+
+				.qodef-digit-wrapper {
+					width: 33.33333333333333%;
+				}
+			}
+		}
+	}
+}

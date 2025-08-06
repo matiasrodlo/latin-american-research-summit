@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Team Single styles
+   ========================================================================== */
+
+.qodef-team-single {
+    @include qodefRelativeLayout();
+
+    .qodef-team-single-item {
+        @include qodefRelativeLayout();
+    }
+
+    .qodef-e-inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        > * {
+            flex-shrink: 0;
+        }
+
+        .qodef-e-image {
+            width: 42.7%;
+        }
+
+        .qodef-e-content {
+            width: 57.3%;
+            padding: 0 10% 0 95px;
+        }
+
+        .qodef-e-section {
+            margin: 48px 0 0;
+
+            &:first-of-type {
+                margin: 0;
+            }
+
+            .qodef-e-title {
+                margin: 0 0 19px;
+            }
+
+            .qodef-e-section-item {
+                margin: 0 0 2px;
+                line-height: 1.5em;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+
+            &.qodef-e-contact-info {
+                a {
+                    @include qodefInlineUnderline($hover: true);
+                }
+            }
+        }
+    }
+
+    .qodef-team-member-role {
+        @include qodefAdditionalInfoStyle();
+
+        & {
+            margin: 0 0 8px;
+        }
+    }
+
+    .qodef-team-member-title {
+        margin: 0;
+    }
+
+    .qodef-team-member-content {
+        margin: 15px 0 0;
+    }
+
+    .qodef-social-icon {
+        @include qodefSocialIconsStyle();
+    }
+}

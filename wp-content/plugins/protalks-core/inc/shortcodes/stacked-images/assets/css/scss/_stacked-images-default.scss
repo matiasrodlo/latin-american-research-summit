@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Stacked Images style - begin
+   ========================================================================== */
+
+.qodef-stacked-images {
+
+	.qodef-m-images {
+		position: relative;
+		display: inline-block;
+
+		.qodef-m-image {
+
+			&:not(:first-child) {
+				position: absolute;
+
+				img {
+					max-width: initial;
+
+					@include qodefScreenSize1200() {
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+
+	&.qodef--has-appear {
+		.qodef-m-image {
+			opacity: 0;
+			transition: .35s opacity ease-out;
+		}
+
+		&.qodef--appeared {
+			.qodef-m-image {
+				opacity: 1;
+
+				&:nth-of-type(2){
+					transition-delay: .2s;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Stacked Images style - end
+   ========================================================================== */

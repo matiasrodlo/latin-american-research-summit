@@ -1,0 +1,64 @@
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+
+#qodef-back-to-top {
+	position: fixed;
+	right: 47px;
+	bottom: 41px;
+	margin: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 100;
+
+	.qodef-back-to-top-icon {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		color: #fff;
+		background-color: var(--qode-second-main-color);
+		border: 1px solid var(--qode-second-main-color);
+		overflow: hidden;
+
+		* {
+			display: block;
+			line-height: inherit;
+		}
+	}
+
+	svg {
+		display: block;
+		width: 19px;
+		height: auto;
+		transition: transform .32s cubic-bezier(0.6, 0.88, 0.33, 0.98);
+		transform: translateY(0px);
+	}
+
+	&:hover {
+
+		.qodef-back-to-top-icon {
+			svg {
+				transform: translateY(-2px);
+			}
+		}
+	}
+
+	&.qodef--off {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.15s ease, visibility .0s .15s;
+	}
+
+	&.qodef--on {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 0.3s ease;
+	}
+}
+
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */

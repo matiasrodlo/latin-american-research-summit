@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Pricing Table shortcode styles
+   ========================================================================== */
+
+.qodef-pricing-table {
+	@include qodefRelativeLayout();
+
+	&.qodef-status--featured {
+
+		.qodef-m-inner {
+			border-color: var(--qode-second-main-color);
+		}
+
+		.qodef-m-title {
+
+			h4 {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+
+				&:after {
+					content: '';
+					display: inline-block;
+					width: 11px;
+					height: 11px;
+					background-color: var(--qode-title-color, var(--qode-second-main-color));
+					border-radius: 100%;
+				}
+			}
+		}
+	}
+	
+	.qodef-m-inner {
+		padding: 67px 58px;
+		background-color: var(--qode-general-background-color, transparent);
+		border: 1px solid var(--qode-general-border-color, $heading-color);
+
+		@include qodefScreenSize1512 {
+			padding: 50px 30px;
+		}
+
+		@include qodefScreenSize1200 {
+			padding: 50px 25px;
+		}
+	}
+	
+	.qodef-m-title {
+		
+		h4 {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			color: var(--qode-title-color, $heading-color);
+		}
+	}
+	
+	.qodef-m-price {
+		margin: 113px 0 0;
+		
+		.qodef-m-price-wrapper {
+			display: flex;
+			align-items: baseline;
+			margin: 0;
+			line-height: 1;
+
+			.qodef-m-price-value,
+			.qodef-m-price-currency {
+				font-family: $additional-heading-font;
+				font-size: 58px;
+				font-weight: 400;
+				font-style: italic;
+				color: var(--qode-second-main-color);
+			}
+
+			.qodef-m-price-value {
+				color: var(--qode-price-color, var(--qode-second-main-color));
+			}
+
+			.qodef-m-price-currency {
+				color: var(--qode-currency-color, var(--qode-second-main-color));
+			}
+
+			.qodef-m-price-label {
+				color: var(--qode-price-label-color, $text-color);
+
+				&:before {
+					content: '/';
+					margin: 0 4px 0 8px;
+				}
+			}
+		}
+	}
+	
+	.qodef-m-content {
+		margin: 26px 0 0;
+		color: var(--qode-content-color, $text-color);
+		
+		ul {
+			list-style: none;
+			margin: 0;
+			
+			li {
+				margin-bottom: 8px;
+				
+				&:last-child {
+					margin-bottom: 0;
+				}
+				
+				&:before {
+					content: '';
+					position: relative;
+					top: -2px;
+					display: inline-block;
+					width: 5px;
+					height: 5px;
+					margin-right: 8px;
+					vertical-align: middle;
+					border: 1px solid var(--qode-content-color, var(--qode-second-main-color));
+					border-radius: 100%;
+				}
+			}
+		}
+	}
+	
+	.qodef-m-button {
+		
+		.qodef-button {
+			margin: 20px 0 0;
+		}
+	}
+}

@@ -1,0 +1,92 @@
+/* ==========================================================================
+# Sticky Header default style
+========================================================================== */
+
+$sticky-header-height: 100px;
+
+.qodef-header-sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: $sticky-header-height;
+	width: 100%;
+	background-color: #fff;
+	border-bottom: 1px solid var(--qode-main-color);
+	transform: translateY(-100%);
+	transition: transform 0.5s ease, top 0.5s ease;
+	z-index: 100;
+	
+	.qodef-header--sticky-display & {
+		transform: translateY(0%);
+	}
+	
+	.admin-bar.qodef-header--sticky-display & {
+		top: 32px;
+	}
+}
+
+.qodef-header-sticky-inner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	padding: $full-width-side-padding;
+	
+	&.qodef-content-grid {
+		padding: 0;
+	}
+	
+	.qodef-header-standard--right & {
+		
+		.qodef-header-logo-link {
+			margin-right: auto;
+		}
+	}
+
+	.qodef-header-standard--center &,
+	.qodef-header--centered & {
+
+		.qodef-header-wrapper {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			height: 100%;
+		}
+
+		.qodef-header-logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			display: inline-flex;
+			align-items: center;
+		}
+
+		.qodef-header-navigation {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.qodef-widget-holder {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin-left: 0;
+		}
+	}
+
+	.qodef-header-standard--left & {
+		justify-content: flex-start;
+		
+		.qodef-widget-holder {
+			margin-left: auto !important;
+		}
+
+		.qodef-header-logo-link {
+			margin-right: 50px;
+		}
+	}
+}

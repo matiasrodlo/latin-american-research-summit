@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Background SVG shortcode styles
+   ========================================================================== */
+
+.qodef-background-svg {
+	@include qodefRelativeLayout();
+	--qode-width: 50vW;
+
+	&.qodef-hidden--on-touch {
+
+		@include qodefScreenSize1024 {
+			display: none;
+		}
+	}
+
+	.qodef-m-svg {
+		position: absolute;
+		stroke: $heading-color;
+		fill: none;
+		pointer-events: none;
+		z-index: 0;
+		width: auto;
+
+		svg {
+			display: block;
+			width: inherit;
+			will-change: transform;
+			transform: rotate(1deg);
+		}
+	}
+
+	&.qodef--predefined {
+		--qodef--gradient-color-stop-1: var(--qode-gradient-color);
+		--qodef--gradient-color-stop-2: var(--qode-gradient-color);
+
+		.qodef--gradient-stop-1 {
+			stop-color: var(--qodef--gradient-color-stop-1);
+			stop-opacity: 1;
+		}
+
+		.qodef--gradient-stop-2 {
+			stop-color: var(--qodef--gradient-color-stop-2);
+			stop-opacity: 0;
+		}
+
+		.qodef-m-svg {
+			aspect-ratio: 1;
+			width: var(--qode-width);
+			stroke: transparent;
+			pointer-events: none;
+			opacity: 0;
+		}
+
+		.qodef-svg--gradient-radial,
+		.qodef-svg--gradient-radial-2 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			overflow: visible;
+		}
+	}
+
+	&.qodef-animation--path-1 {
+		--qode-width: 55vMax;
+		position: absolute;
+		margin-top: 0;
+		margin-left: 100%;
+
+		.qodef-m-svg {
+			aspect-ratio: 1.2/1;
+			animation: qode-opacity 1s forwards, qode-bg-gradient-top-right 7s 1s linear forwards infinite;
+			animation-iteration-count: 1, infinite;
+			translate: -50% -30%;
+		}
+	}
+
+	&.qodef-animation--path-2 {
+		--qode-width: 36vMax;
+		position: absolute;
+		margin-top: 100%;
+		margin-left: 0;
+
+		.qodef-m-svg {
+			aspect-ratio: 1.2/1;
+			animation-iteration-count: 1, infinite;
+			translate: -50% -50%;
+			animation: qode-opacity 1s forwards, qode-bg-gradient-bottom-left 7s -3.5s linear forwards infinite;
+		}
+	}
+
+	&.qodef-animation--path-3 {
+		--qode-width: 45vMax;
+		position: absolute;
+		margin-top: 0;
+		margin-left: 100%;
+
+		.qodef-m-svg {
+			aspect-ratio: 1.2 / 1;
+			animation: qode-opacity 1s forwards, qode-bg-gradient-top-right-2 7s -1s linear forwards;
+			animation-iteration-count: 1, infinite;
+			translate: -111% -18%;
+		}
+	}
+}
+
+
+@keyframes qode-bg-gradient-top-right {
+	0% {
+		opacity: 1;
+		transform: rotate(-25deg)
+	}
+
+	50% {
+		opacity: .5;
+		transform: rotate(155deg) scaleX(2.4) scaleY(3.2) translateX(7%) translateY(5%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(335deg)
+	}
+}
+
+@keyframes qode-bg-gradient-top-right-2 {
+	0% {
+		opacity: 1;
+		transform: rotate(-25deg);
+	}
+	50% {
+		opacity: .8;
+		transform: rotate(155deg) scaleX(1.4) scaleY(1.4) translateX(7%) translateY(-5%);
+	}
+	100% {
+		opacity: 1;
+		transform: rotate(335deg);
+	}
+}
+
+@keyframes qode-bg-gradient-bottom-left {
+	0% {
+		opacity: 1;
+		transform: rotate(-25deg);
+	}
+
+	50% {
+		opacity: .5;
+		transform: rotate(155deg) scaleX(2.2) scaleY(2) translateX(-6%) translateY(-55%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(335deg);
+	}
+}

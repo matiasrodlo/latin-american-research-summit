@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Image Gallery shortcode styles
+   ========================================================================== */
+
+.qodef-image-gallery {
+
+	&.qodef--image-shadow {
+
+		&.qodef-layout--columns,
+		&.qodef-layout--masonry {
+
+			.qodef-image-wrapper {
+				img {
+					box-shadow: 0 3px 6px 0 rgba(40, 54, 66, 0.15);
+				}
+			}
+		}
+
+		&.qodef-swiper-container {
+			.qodef-image-wrapper {
+				img {
+					margin: 5px;
+					width: calc(100% - 10px);
+					box-shadow: 0 3px 6px 0 rgba(40, 54, 66, 0.15);
+				}
+			}
+		}
+	}
+
+	&.qodef-hover--overlay {
+
+		.qodef-e {
+			.qodef-image-wrapper-inner {
+				@include qodeFilterEffect($with-zoom: false);
+			}
+
+			&:hover {
+				.qodef-image-wrapper-inner {
+					@include qodeFilterEffectHover($with-zoom: false);
+				}
+			}
+		}
+	}
+
+	&.qodef-hover--move {
+		.qodef-e {
+			.qodef-image-wrapper-inner {
+				transition: transform .5s ease;
+				--qode-y: -5px;
+				transform: translateY(0px);
+			}
+
+			&:hover {
+				.qodef-image-wrapper-inner {
+					transform: translateY(var(--qode-y));
+				}
+			}
+		}
+	}
+}

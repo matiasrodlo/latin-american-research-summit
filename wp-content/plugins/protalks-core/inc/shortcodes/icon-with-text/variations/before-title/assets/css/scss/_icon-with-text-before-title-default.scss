@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Icon With Text shortcode styles
+   ========================================================================== */
+
+.qodef-icon-with-text {
+
+	&.qodef-layout--before-title {
+		
+		.qodef-m-title {
+			line-height: 1;
+		}
+		
+		.qodef-m-title-inner {
+			display: flex;
+			align-items: center;
+		}
+		
+		.qodef-m-icon-wrapper {
+			flex-shrink: 0;
+
+			.qodef-icon-holder {
+				margin-right: 5px;
+			}
+		}
+	}
+}

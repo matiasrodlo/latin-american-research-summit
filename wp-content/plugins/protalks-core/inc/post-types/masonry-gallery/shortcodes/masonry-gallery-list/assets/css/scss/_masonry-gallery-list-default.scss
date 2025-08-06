@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Masonry gallery shortcode styles
+   ========================================================================== */
+
+.qodef-masonry-gallery-list {
+	
+	.qodef-e-inner {
+		@include qodefRelativeLayout();
+		border-radius: 10px;
+		background-color: #fff;
+	}
+	
+	.qodef-e-media-image {
+		@include qodefRelativeLayout();
+		
+		img {
+			display: block;
+		}
+	}
+	
+	.qodef-e-content {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.qodef-e-title {
+		margin: 0;
+	}
+	
+	.qodef-e-text {
+		font-size: 1.1em;
+		line-height: 1.56em;
+		margin: 12px 0 0;
+	}
+	
+	.qodef-e-button {
+		a {
+			position: relative;
+			z-index: 2;
+		}
+	}
+	
+	.qodef-e-link {
+		@include qodefAbsoluteLayout();
+	}
+}
