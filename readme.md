@@ -1,14 +1,10 @@
 # Latin American Research Summit
 
-**Empowering the next generation of researchers**
-
 The Latin American Research Summit is a two-day event dedicated to fostering collaboration, innovation, and academic growth among early-career researchers across Latin America, with a focus on management, artificial intelligence, and entrepreneurship.
 
-## About the Summit
+<img width="3024" height="1714" alt="image" src="https://github.com/user-attachments/assets/b4c89efc-78a3-4c14-a5d8-4f8fd7b5ba25" />
 
-The Latin American Research Summit is designed to bring together undergraduate, master's, and doctoral students to showcase their ongoing research, receive feedback, and strengthen their academic identity.
-
-### Our Focus Areas
+### Empowering the next generation of researchers
 
 - **Emerging Researchers** – We empower emerging undergraduate and graduate researchers, providing a space to showcase advances, receive feedback, and strengthen their academic identity.
 
