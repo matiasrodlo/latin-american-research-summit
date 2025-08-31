@@ -1,6 +1,5 @@
 # Latin American Research Summit
 
-Welcome to the Latin American Research Summit repository.  
 This summit is dedicated to fostering collaboration, innovation, and academic growth among early-career researchers across Latin America.
 
 ## About the Summit
